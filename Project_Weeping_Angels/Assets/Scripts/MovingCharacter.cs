@@ -24,17 +24,17 @@ public class MovingCharacter : MonoBehaviour {
 
 	void _moveCharacter(){
 		//speed is in m/s
-		Debug.Log ("moving character function called");
+		//Debug.Log ("moving character function called");
 		//float speed = 30.0f;
 		CharacterController controller = player.GetComponent<CharacterController> ();
 		//transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
 		Vector3 forward = transform.TransformDirection(direction);
-		float curSpeed = speed * Input.GetAxis("Vertical");
+		//float curSpeed = speed * Input.GetAxis("Vertical");
 		//controller.SimpleMove(forward * curSpeed);
 		direction.x = -direction.x;
-		direction.y = -direction.y;
+		direction.y = 0f;
 		direction.z = -direction.z;
-		controller.Move (direction * Time.deltaTime);
+		controller.Move (direction * Time.deltaTime * speed);
 
 	}
 }

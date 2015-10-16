@@ -14,6 +14,12 @@ public class WalkingGesture : MonoBehaviour {
 	public float Z_THRESHOLD_MAX = -0.2f;
 	public static bool isMoving = false;
 	public static Vector3 moving_Direction = Vector3.zero;
+	public float Angle_Threshold = 22.5f;
+
+	//-------------------------------
+	private Vector3 Pre_Direction = Vector3.zero;
+	private Vector3 Temp_Direction = Vector3.zero;
+
 	void Start () {
 		_controller = new Controller ();
 	}
@@ -25,8 +31,10 @@ public class WalkingGesture : MonoBehaviour {
 
 		//check the hand list
 		HandList _handlist = frame.Hands;
-		if (_handlist.Count == 0)
+		if (_handlist.Count == 0) {
+			isMoving = false;
 			return;
+		}
 
 		//Save left and right hand
 		Hand leftHand = null; Hand rightHand = null;
@@ -65,8 +73,36 @@ public class WalkingGesture : MonoBehaviour {
 			//the walking gesture: index finger pointing forward
 			if (Index_Finger.IsValid) {
 				//Debug.Log ("index finger direction is " + Index_Finger.Direction.ToString ());
-				isMoving = true;
-				moving_Direction = Index_Finger.Direction.ToUnity ();
+
+				Temp_Direction = Index_Finger.Direction.ToUnity();
+
+				if(Pre_Direction != Vector3.zero)
+				{
+					//if this is not the first time, compare the angle between the two vectors
+					float angle = Vector3.Angle(Pre_Direction,Temp_Direction);
+					if(angle > Angle_Threshold)
+					{
+						Debug.Log("angle bigger than threshold! Angle is " + angle.ToString());
+						moving_Direction = Temp_Direction;
+						isMoving = true;
+					}else if (angle < Angle_Threshold)
+					{
+						moving_Direction = Pre_Direction;
+						isMoving = true;
+					}else
+						isMoving = false;
+
+				}else
+				{
+					//the first time
+					moving_Direction = Temp_Direction;
+					isMoving = true;
+				}
+
+				Pre_Direction = Temp_Direction;
+
+				//moving_Direction = Index_Finger.Direction.ToUnity ();
+
 			} else
 				isMoving = false;
 		}

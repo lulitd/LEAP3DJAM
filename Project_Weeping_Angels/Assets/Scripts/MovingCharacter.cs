@@ -31,9 +31,9 @@ public class MovingCharacter : MonoBehaviour {
 		Vector3 forward = transform.TransformDirection(direction);
 		//float curSpeed = speed * Input.GetAxis("Vertical");
 		//controller.SimpleMove(forward * curSpeed);
-		direction.x = -direction.x;
+		direction.x = -direction.x*2f;
 		direction.y = 0f;
-		direction.z = -direction.z;
+		direction.z = direction.z;
 		controller.Move (direction * Time.deltaTime * speed);
 
 	}

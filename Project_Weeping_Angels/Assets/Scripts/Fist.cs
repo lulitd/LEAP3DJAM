@@ -17,6 +17,10 @@ public class Fist : MonoBehaviour {
 	private bool isAttacking = false;
 	public static bool IS_ATTACKING = false; 
 	public float _zThreshold = 70f;
+
+	private float strength;
+	public float Strength_Threshold = 0.8f;
+
 	void Start () {
 		//leap_controller = Leap.Controller;
 		_controller = new Controller ();
@@ -43,17 +47,30 @@ public class Fist : MonoBehaviour {
 		}
 
 		//get the radius of the hand sphere
-		float radius = -1f;
-		if (isLeftHanded && leftHand != null)
-			radius = leftHand.SphereRadius;
-		else if (rightHand != null)
-			radius = rightHand.SphereRadius;
+//		float radius = -1f;
+//		if (isLeftHanded && leftHand != null)
+//			radius = leftHand.SphereRadius;
+//		else if (rightHand != null)
+//			radius = rightHand.SphereRadius;
+//
+//		if (radius <= radius_threshold && radius != -1f) {
+//			Debug.Log ("fist detected");
+//			//Debug.Log ("radius is " + radius.ToString ());
+//			isFist = true;
+//		} else 
+//			isFist = false;
 
-		if (radius <= radius_threshold && radius != -1f) {
-			Debug.Log ("fist detected");
-			//Debug.Log ("radius is " + radius.ToString ());
+		//test the grab strength to determine if it is a fist
+		if (isLeftHanded && leftHand.IsValid) {
+			strength = leftHand.GrabStrength;
+		} else if (rightHand.IsValid) {
+			strength = rightHand.GrabStrength;
+		}
+
+		if (strength > Strength_Threshold) {
+			Debug.Log("Fist detected!");
 			isFist = true;
-		} else 
+		}else
 			isFist = false;
 
 		//check the attacking gesture 

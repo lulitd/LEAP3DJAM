@@ -176,6 +176,7 @@
 'Assets/OVR/Scripts/Util/OVRScreenFade.cs'
 'Assets/OVR/Scripts/Util/OVRUGUI.cs'
 'Assets/OVR/Scripts/Util/OVRVisionGuide.cs'
+'Assets/Scripts/ColliderDetector.cs'
 'Assets/Scripts/Fist.cs'
 'Assets/Scripts/MovingCharacter.cs'
 'Assets/Scripts/WalkingGesture.cs'

@@ -21,13 +21,13 @@ public class GrabbingHand : MonoBehaviour {
   public LayerMask grabbableLayers = ~0;
 
   // Ratio of the length of the proximal bone of the thumb that will trigger a pinch.
-  public float grabTriggerDistance = 0.7f;
+  public float grabTriggerDistance = 0.1f;
 
   // Ratio of the length of the proximal bone of the thumb that will trigger a release.
-  public float releaseTriggerDistance = 1.2f;
+  public float releaseTriggerDistance = 0.8f;
 
   // Maximum distance of an object that we can grab when pinching.
-  public float grabObjectDistance = 2.0f;
+  public float grabObjectDistance = 0.05f;
 
   // If the object gets far from the pinch we'll break the bond.
   public float releaseBreakDistance = 0.3f;
@@ -128,6 +128,7 @@ public class GrabbingHand : MonoBehaviour {
     HandModel hand_model = GetComponent<HandModel>();
     Leap.Utils.IgnoreCollisions(gameObject, active_object_.gameObject, true);
     GrabbableObject grabbable = active_object_.GetComponent<GrabbableObject>();
+	
 
     // Setup initial position and rotation conditions.
     palm_rotation_ = hand_model.GetPalmRotation();
@@ -162,6 +163,9 @@ public class GrabbingHand : MonoBehaviour {
     if (grabbable != null) {
       // Notify grabbable object that it was grabbed.
       grabbable.OnGrab();
+
+			//luke and Rose addded
+			Debug.Log (grabbable.name);
 
       if (grabbable.useAxisAlignment) {
         // If this option is enabled we only want to align the object axis with the palm axis

@@ -58,7 +58,7 @@ public class GrabbableObject : MonoBehaviour {
     if (breakableJoint != null) {
       Joint breakJoint = breakableJoint.GetComponent<Joint>();
       if (breakJoint != null) {
-        breakJoint.breakForce = Mathf.Infinity;
+     //   breakJoint.breakForce = Mathf.Infinity;
         breakJoint.breakTorque = Mathf.Infinity;
       }
     }

@@ -2,7 +2,7 @@
 using System.Collections;
 using LMWidgets;
 
-public class ButtonDemoToggle : ButtonToggleBase 
+public class ButtonDemoToggleCredits : ButtonToggleBase 
 {
   public ButtonDemoGraphics onGraphics;
   public ButtonDemoGraphics offGraphics;

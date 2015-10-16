@@ -61,3 +61,7 @@ Cmd: compileSnippet
   api=0 type=0 insize=938 outsize=6336 kw=POINT SHADOWS_OFF _ALPHAPREMULTIPLY_ON pd= ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=938 outsize=6 kw=POINT SHADOWS_OFF _ALPHAPREMULTIPLY_ON pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=5061 outsize=3630 kw=POINT pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5061 outsize=6 kw=POINT pd= ok=1

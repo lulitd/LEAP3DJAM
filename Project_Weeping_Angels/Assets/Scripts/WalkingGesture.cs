@@ -67,45 +67,72 @@ public class WalkingGesture : MonoBehaviour {
 
 
 
-			//store the middle finger
-			Finger Middle_Finger = rightHand.Finger (2);
 
-			//the walking gesture: index finger pointing forward
-			if (Index_Finger.IsValid) {
-				//Debug.Log ("index finger direction is " + Index_Finger.Direction.ToString ());
 
-				Temp_Direction = Index_Finger.Direction.ToUnity();
+//			//the walking gesture: index finger pointing forward
+//			if (Index_Finger.IsValid) {
+//				//Debug.Log ("index finger direction is " + Index_Finger.Direction.ToString ());
+//
+//				Temp_Direction = Index_Finger.Direction.ToUnity ();
+//				Vector3 Temp_Direction_palm = rightHand.Direction.ToUnity();
+//
+//				if (Pre_Direction != Vector3.zero) {
+//					//if this is not the first time, compare the angle between the two vectors
+//					float angle = Vector3.Angle (Pre_Direction, Temp_Direction);
+//					if (angle > Angle_Threshold) {
+//						Debug.Log ("angle bigger than threshold! Angle is " + angle.ToString ());
+//						moving_Direction = Temp_Direction;
+//						isMoving = true;
+//					} else if (angle < Angle_Threshold) {
+//						moving_Direction = Pre_Direction;
+//						isMoving = true;
+//					} else
+//						isMoving = false;
+//
+//				} else {
+//					//the first time
+//					moving_Direction = Temp_Direction;
+//					isMoving = true;
+//				}
+//
+//				Pre_Direction = Temp_Direction;
+//
+//				//moving_Direction = Index_Finger.Direction.ToUnity ();
+//
+//			} else
+//				isMoving = false;
+
+			//walking gesture with palm direction
+			if(rightHand.IsValid)		//if right hand is valid, test the gesture
+			{
+				Temp_Direction = rightHand.Direction.ToUnity();
 
 				if(Pre_Direction != Vector3.zero)
 				{
 					//if this is not the first time, compare the angle between the two vectors
-					float angle = Vector3.Angle(Pre_Direction,Temp_Direction);
-					if(angle > Angle_Threshold)
-					{
+					float angle = Vector3.Angle(Pre_Direction, Temp_Direction);
+
+					if(angle> Angle_Threshold){
 						Debug.Log("angle bigger than threshold! Angle is " + angle.ToString());
 						moving_Direction = Temp_Direction;
 						isMoving = true;
-					}else if (angle < Angle_Threshold)
-					{
+					}else if (angle < Angle_Threshold){
 						moving_Direction = Pre_Direction;
 						isMoving = true;
 					}else
 						isMoving = false;
-
-				}else
-				{
+				}else{
 					//the first time
 					moving_Direction = Temp_Direction;
 					isMoving = true;
 				}
-
 				Pre_Direction = Temp_Direction;
 
-				//moving_Direction = Index_Finger.Direction.ToUnity ();
-
-			} else
+			}else
 				isMoving = false;
-		}
+
+		} else
+			isMoving = false;
 
 
 	}

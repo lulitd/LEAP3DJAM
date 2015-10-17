@@ -13,8 +13,16 @@ public class ButtonDemoToggleStart : ButtonToggleBase
   public Color BotGraphicsOnColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
   public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
   public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
-	
 
+
+
+	protected override void Start()
+	{
+		base.Start();
+
+	}
+
+	
   public override void ButtonTurnsOn()
   {
     TurnsOnGraphics();
@@ -31,7 +39,8 @@ public class ButtonDemoToggleStart : ButtonToggleBase
     offGraphics.SetActive(false);
 	midGraphics.SetColor(MidGraphicsOnColor);
 	botGraphics.SetColor(BotGraphicsOnColor);
-		Application.LoadLevel ("WalkingTerrainTest");
+		//Application.LoadLevel ("WalkingTerrainTest");
+		FadeControl.isFade = true;
   }
 
   private void TurnsOffGraphics()
@@ -57,10 +66,7 @@ public class ButtonDemoToggleStart : ButtonToggleBase
     midGraphics.transform.localPosition = mid_position;
   }
 
-  protected override void Start()
-  {
-    base.Start();
-  }
+
 
   protected override void FixedUpdate()
   {

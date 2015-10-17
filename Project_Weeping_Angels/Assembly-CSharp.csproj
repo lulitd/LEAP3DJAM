@@ -45,6 +45,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FadeControl.cs" />
+     <Compile Include="Assets\FadeTransparency.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\BlocksPlaneGenerator.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\MovementManager.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\RandomBlocksGenerator.cs" />
@@ -149,6 +151,7 @@
      <Compile Include="Assets\Scripts\ColliderDetector.cs" />
      <Compile Include="Assets\Scripts\Fist.cs" />
      <Compile Include="Assets\Scripts\MovingCharacter.cs" />
+     <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\WalkingGesture.cs" />
      <Compile Include="Assets\Scripts\changeMaterialOnAttack.cs" />
      <None Include="Assets\ghoul\shader\ghoulshader.shader" />
@@ -183,11 +186,17 @@
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Plugins\SystemWipeRecognizerDll.bundle\Contents\MacOS\version.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>/Users/Hisashi/Documents/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>

@@ -199,7 +199,15 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
+<<<<<<< HEAD
  <HintPath>/Users/Hisashi/Documents/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+=======
+<<<<<<< HEAD
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+=======
+ <HintPath>/Users/Hisashi/Documents/3DJam/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+>>>>>>> origin/master
+>>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

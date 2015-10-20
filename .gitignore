@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+Project_Weeping_Angels/Assembly-CSharp-Editor.csproj
+
+*.csproj
+
+Project_Weeping_Angels/Assembly-CSharp.csproj
+
+Project_Weeping_Angels/Assembly-CSharp-firstpass.csproj
+
+Project_Weeping_Angels/Assembly-CSharp-firstpass.csproj
+
+Project_Weeping_Angels/Library/shadercompiler-64bit-1.log
+=======
 Project_Weeping_Angels/Temp/UnityLockfile
 
 *.bakert
@@ -6,11 +19,17 @@ Project_Weeping_Angels/Temp/UnityLockfile
 Project_Weeping_Angels/Temp/__EditModeScene
 
 Project_Weeping_Angels/Project_Weeping_Angels.userprefs
+>>>>>>> origin/master
 
 *.sln
 
 *.log
 
+<<<<<<< HEAD
+*.csproj
+
+Project_Weeping_Angels/Assembly-CSharp-Editor.csproj
+=======
 Project_Weeping_Angels/Library/metadata/00/00000000000000004000000000000000
 
 Project_Weeping_Angels/Library/expandedItems
@@ -28,3 +47,4 @@ Project_Weeping_Angels/Library/assetDatabase3
 *.csproj
 
 Project_Weeping_Angels/Assets/Scene/WalkingTerrainTest.unity
+>>>>>>> origin/master

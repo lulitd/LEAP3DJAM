@@ -1,27 +1,30 @@
 fileFormatVersion: 2
-guid: 81c36e2bb74455a429ffac7ebb8fdf34
+guid: 76c305935f4b944cda659207f2f14a5c
+timeCreated: 1445640954
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
     100002: ModelSlime
-    100004: Root
-    100006: Slime_Joint01
-    100008: Slime_Joint02
-    100010: Slime_Joint03
+    100004: Null
+    100006: Root
+    100008: Slime_Joint01
+    100010: Slime_Joint02
+    100012: Slime_Joint03
     400000: //RootNode
     400002: ModelSlime
-    400004: Root
-    400006: Slime_Joint01
-    400008: Slime_Joint02
-    400010: Slime_Joint03
+    400004: Null
+    400006: Root
+    400008: Slime_Joint01
+    400010: Slime_Joint02
+    400012: Slime_Joint03
     4300000: ModelSlime
     9500000: //RootNode
-    11100000: //RootNode
     13700000: ModelSlime
   materials:
     importMaterials: 1
-    materialName: 2
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -42,9 +45,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 5
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -56,7 +59,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -77,7 +80,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

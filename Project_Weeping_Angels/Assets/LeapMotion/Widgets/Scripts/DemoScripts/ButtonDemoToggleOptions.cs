@@ -31,6 +31,7 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
     offGraphics.SetActive(false);
 	midGraphics.SetColor(MidGraphicsOnColor);
 	botGraphics.SetColor(BotGraphicsOnColor);
+
   }
 
   private void TurnsOffGraphics()
@@ -39,6 +40,8 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
     offGraphics.SetActive(true);
 	midGraphics.SetColor(MidGraphicsOffColor);
 	botGraphics.SetColor(BotGraphicsOffColor);
+		GameObject.FindGameObjectWithTag ("credits");
+
   }
 
   private void UpdateGraphics()

@@ -45,7 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
      <Compile Include="Assets\AstarPathfindingProject\Core\AI\AIPath.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Core\AI\Seeker.cs" />
@@ -119,11 +118,6 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\Cha_Data\Script\ScreenShot.cs" />
-     <Compile Include="Assets\FadeControl.cs" />
-     <Compile Include="Assets\FadeTransparency.cs" />
-=======
-     <Compile Include="Assets\BlinkControl.cs" />
->>>>>>> origin/master
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\BlocksPlaneGenerator.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\MovementManager.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\RandomBlocksGenerator.cs" />
@@ -229,14 +223,10 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scene\Luke\ClockTime.cs" />
      <Compile Include="Assets\Scene\Luke\LukeUIHand.cs" />
      <Compile Include="Assets\Scripts\Blink.cs" />
      <Compile Include="Assets\Scripts\BlinkControl.cs" />
-=======
-     <Compile Include="Assets\Scripts\Blink.cs" />
->>>>>>> origin/master
      <Compile Include="Assets\Scripts\ColliderDetector.cs" />
      <Compile Include="Assets\Scripts\FadeControl.cs" />
      <Compile Include="Assets\Scripts\FadeTransparency.cs" />
@@ -292,39 +282,7 @@
  <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
-<<<<<<< HEAD
  <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>/Users/Hisashi/Documents/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
-<<<<<<< HEAD
- <HintPath>/Users/Hisashi/Documents/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
- <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
-=======
- <HintPath>/Users/Hisashi/Documents/3DJam/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
->>>>>>> origin/master
->>>>>>> origin/master
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

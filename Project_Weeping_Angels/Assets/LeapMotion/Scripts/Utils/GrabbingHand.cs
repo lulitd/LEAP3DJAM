@@ -11,6 +11,14 @@ using Leap;
 // Leap Motion hand script that detects pinches and grabs the closest rigidbody.
 public class GrabbingHand : MonoBehaviour {
 
+	public HandModel[] leftHands;
+	public HandModel[] rightHands;
+	
+	private int hand_index_ = 0;
+
+	boolean isGrabbing = false;
+
+
   public enum PinchState {
     kPinched,
     kReleased,
@@ -47,6 +55,9 @@ public class GrabbingHand : MonoBehaviour {
   // Clamps the movement of the grabbed object.
   public Vector3 maxMovement = new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity);
   public Vector3 minMovement = new Vector3(-Mathf.Infinity, -Mathf.Infinity, -Mathf.Infinity);
+	public float aroundHand = 5f;
+
+
 
   protected PinchState pinch_state_;
   protected Collider active_object_;
@@ -58,6 +69,8 @@ public class GrabbingHand : MonoBehaviour {
   protected Vector3 filtered_pinch_position_;
   protected Vector3 object_pinch_offset_;
   protected Quaternion palm_rotation_;
+
+
 
   void Start() {
     pinch_state_ = PinchState.kReleased;
@@ -73,6 +86,8 @@ public class GrabbingHand : MonoBehaviour {
   void OnDestroy() {
     OnRelease();
   }
+
+
 
   // Finds the closest grabbable object within range of the pinch.
   protected Collider FindClosestGrabbableObject(Vector3 pinch_position) {
@@ -165,7 +180,7 @@ public class GrabbingHand : MonoBehaviour {
       grabbable.OnGrab();
 
 			//luke and Rose addded
-			Debug.Log (grabbable.name);
+			//Debug.Log (grabbable.name);
 
       if (grabbable.useAxisAlignment) {
         // If this option is enabled we only want to align the object axis with the palm axis
@@ -307,11 +322,44 @@ public class GrabbingHand : MonoBehaviour {
                                        ForceMode.Acceleration);
   }
 
+
+
+	protected void SetNewHands() {
+		HandController controller = GetComponent<HandController>();
+
+
+			controller.leftGraphicsModel = leftHands [hand_index_];
+
+
+			controller.rightGraphicsModel = rightHands [hand_index_];
+		
+		controller.DestroyAllHands();
+	}
+
+
+	protected void updateModel(){
+		if (isGrabbing) {
+			hand_index_ = hand_index_ + 1;
+		}
+	}
+
+	public void detectAroundHand(){
+		Collider[] coll;
+		//coll = Physics.CheckSphere (transform.position, aroundHand);
+		coll = Physics.OverlapSphere (transform.position, aroundHand);
+
+		foreach (Collider c in coll) {
+			isGrabbing = c.gameObject.CompareTag("Weapon");
+		}
+	}
+
   void FixedUpdate() {
     UpdatePalmRotation();
     UpdatePinchPosition();
     HandModel hand_model = GetComponent<HandModel>();
     Hand leap_hand = hand_model.GetLeapHand();
+		detectAroundHand ();
+
 
     if (leap_hand == null)
       return;

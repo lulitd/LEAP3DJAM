@@ -227,6 +227,8 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
      <Compile Include="Assets\Scene\Luke\ClockTime.cs" />
      <Compile Include="Assets\Scene\Luke\LukeUIHand.cs" />
+     <Compile Include="Assets\Scripts\Blink.cs" />
+     <Compile Include="Assets\Scripts\BlinkControl.cs" />
      <Compile Include="Assets\Scripts\ColliderDetector.cs" />
      <Compile Include="Assets\Scripts\Fist.cs" />
      <Compile Include="Assets\Scripts\HandModelObjectList.cs" />

@@ -16,7 +16,7 @@ public class GrabbingHand : MonoBehaviour {
 	
 	private int hand_index_ = 0;
 
-	boolean isGrabbing = false;
+	bool isGrabbing = false;
 
 
   public enum PinchState {

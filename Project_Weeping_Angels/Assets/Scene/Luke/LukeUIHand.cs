@@ -15,7 +15,7 @@ public class LukeUIHand : HandModel
 	public Vector3 modelFingerPointing = Vector3.forward;
 	public Vector3 modelPalmFacing = -Vector3.up;
 	public GameObject prefeb;
-	public GameObject preLightEff;
+	//public GameObject preLightEff;
 	private bool haveWatch = false;
 	
 	public override void InitHand()
@@ -64,7 +64,7 @@ public class LukeUIHand : HandModel
 			{
 				
 				Instantiate(prefeb, new Vector3(0F, 0, -10), Quaternion.identity);
-				Instantiate(preLightEff, new Vector3(0F, 0, -10), Quaternion.AngleAxis(270,Vector3.right));      
+				//Instantiate(preLightEff, new Vector3(0F, 0, -10), Quaternion.AngleAxis(270,Vector3.right));      
 				haveWatch = true;
 			}
 		}
@@ -74,7 +74,7 @@ public class LukeUIHand : HandModel
 			{
 				
 				Destroy(GameObject.FindGameObjectWithTag("UIWatch"));
-				Destroy(GameObject.FindGameObjectWithTag("LightEff"));
+				//Destroy(GameObject.FindGameObjectWithTag("LightEff"));
 				haveWatch = false;
 			}
 		}
@@ -83,15 +83,15 @@ public class LukeUIHand : HandModel
 	public void updateUIPos()
 	{ //keep UI around head
 		GameObject temp = GameObject.FindGameObjectWithTag("UIWatch");
-		GameObject temp1 = GameObject.FindGameObjectWithTag("LightEff");
+		//GameObject temp1 = GameObject.FindGameObjectWithTag("LightEff");
 		if (temp != null)
 		{
 			if (haveWatch == true)
 			{
-				Vector3 UIPosition = GetPalmPosition() + Vector3.up * 2f ;
+				Vector3 UIPosition = GetPalmPosition() + Vector3.up * 1f ;
 				temp.transform.position = UIPosition;
-				Vector3 LightPosition = GetPalmPosition()+ Vector3.up * 0.5f;
-				temp1.transform.position = LightPosition;
+				//Vector3 LightPosition = GetPalmPosition()+ Vector3.up * 0.5f;
+				//temp1.transform.position = LightPosition;
 			}
 		}
 	}

@@ -10,7 +10,7 @@ public class Fist : MonoBehaviour {
 
 	public float radius_threshold = 30f;
 
-	private bool isFist = false;
+	public bool isFist = false;
 
 	private Vector handSpeed = Vector.Zero;
 

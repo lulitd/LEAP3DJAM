@@ -331,6 +331,8 @@ public class HandController : MonoBehaviour {
       UpdateHandModels(hand_graphics_, frame.Hands, leftGraphicsModel, rightGraphicsModel);
       prev_graphics_id_ = frame.Id;
     }
+
+
   }
 
   /** Updates the physics objects */

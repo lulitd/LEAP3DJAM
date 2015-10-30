@@ -19,9 +19,10 @@ public class WalkingGesture : MonoBehaviour {
 	//-------------------------------
 	private Vector3 Pre_Direction = Vector3.zero;
 	private Vector3 Temp_Direction = Vector3.zero;
-
+	private Fist fist;
 	void Start () {
 		_controller = new Controller ();
+		fist = GameObject.FindObjectOfType<Fist> ();
 	}
 	
 	void Update () {
@@ -105,6 +106,12 @@ public class WalkingGesture : MonoBehaviour {
 			//walking gesture with palm direction
 			if(rightHand.IsValid)		//if right hand is valid, test the gesture
 			{
+				if(fist.isFist)
+				{
+					isMoving = false;
+					return;
+				}
+				//Debug.Log("is Fist " + fist.isFist);
 				Temp_Direction = rightHand.Direction.ToUnity();
 
 				if(Pre_Direction != Vector3.zero)

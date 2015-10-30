@@ -117,6 +117,7 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\BlinkQuickSwitcher.cs" />
      <Compile Include="Assets\Cha_Data\Script\ScreenShot.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\BlocksPlaneGenerator.cs" />
      <Compile Include="Assets\LeapMotion+OVR\DemoResources\Scripts\MovementManager.cs" />
@@ -223,10 +224,13 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
+     <Compile Include="Assets\QuadFadeIn.cs" />
      <Compile Include="Assets\Scene\Luke\ClockTime.cs" />
      <Compile Include="Assets\Scene\Luke\LukeUIHand.cs" />
      <Compile Include="Assets\Scripts\Blink.cs" />
      <Compile Include="Assets\Scripts\BlinkControl.cs" />
+     <Compile Include="Assets\Scripts\BlinkQuad.cs" />
+     <Compile Include="Assets\Scripts\BlinkQuadControl.cs" />
      <Compile Include="Assets\Scripts\ColliderDetector.cs" />
      <Compile Include="Assets\Scripts\FadeControl.cs" />
      <Compile Include="Assets\Scripts\FadeTransparency.cs" />

@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/DemoResources/Scripts/HandCycler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Scripts/HandController.cs">
     <Files>
-      <File FileName="Assets/LeapMotion/DemoResources/Scripts/HandCycler.cs" Line="11" Column="2" />
+      <File FileName="Assets/LeapMotion/Scripts/HandController.cs" Line="334" Column="3" />
+      <File FileName="Assets/LeapMotion/DemoResources/Scripts/HandCycler.cs" Line="11" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

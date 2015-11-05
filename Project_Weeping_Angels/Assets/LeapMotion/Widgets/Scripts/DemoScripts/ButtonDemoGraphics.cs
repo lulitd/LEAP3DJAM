@@ -39,4 +39,22 @@ public class ButtonDemoGraphics : MonoBehaviour
 			image.color = color;
 		}
 	}
+	public void SetMaterial(Material mat, Color color){
+		Renderer[] renderers = GetComponentsInChildren<Renderer>();
+		Text[] texts = GetComponentsInChildren<Text>();
+		Image[] GUIimages = GetComponentsInChildren<Image>();
+		foreach (Renderer renderer in renderers) {
+			renderer.material = mat;
+		}
+		foreach (Text text in texts){
+			text.color = color;
+		}
+		foreach(Image image in GUIimages){
+			image.material = mat;
+		}
+
+
+
+
+	}
 }

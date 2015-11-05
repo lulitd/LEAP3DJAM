@@ -19,6 +19,7 @@ public class GrabbingHand : MonoBehaviour {
 	bool isGrabbing = false;
 
 
+
   public enum PinchState {
     kPinched,
     kReleased,
@@ -84,7 +85,7 @@ public class GrabbingHand : MonoBehaviour {
   }
 
   void OnDestroy() {
-    OnRelease();
+//    OnRelease();
   }
 
 
@@ -178,9 +179,10 @@ public class GrabbingHand : MonoBehaviour {
     if (grabbable != null) {
       // Notify grabbable object that it was grabbed.
       grabbable.OnGrab();
+			sendIndex();
 
 			//luke and Rose addded
-			//Debug.Log (grabbable.name);
+			Debug.Log (grabbable.name);
 
       if (grabbable.useAxisAlignment) {
         // If this option is enabled we only want to align the object axis with the palm axis
@@ -199,22 +201,22 @@ public class GrabbingHand : MonoBehaviour {
     }
   }
 
-  protected void OnRelease() {
-    if (active_object_ != null) {
-      // Notify the grabbable object that is was released.
-      GrabbableObject grabbable = active_object_.GetComponent<GrabbableObject>();
-      if (grabbable != null)
-        grabbable.OnRelease();
-
-      if (grabbable == null || grabbable.rotateQuickly)
-        active_object_.GetComponent<Rigidbody>().maxAngularVelocity = last_max_angular_velocity_;
-
-      Leap.Utils.IgnoreCollisions(gameObject, active_object_.gameObject, false);
-    }
-    active_object_ = null;
-
-    Hover();
-  }
+//  protected void OnRelease() {
+//    if (active_object_ != null) {
+//      // Notify the grabbable object that is was released.
+//      GrabbableObject grabbable = active_object_.GetComponent<GrabbableObject>();
+//      if (grabbable != null)
+//        grabbable.OnRelease();
+//
+//      if (grabbable == null || grabbable.rotateQuickly)
+//        active_object_.GetComponent<Rigidbody>().maxAngularVelocity = last_max_angular_velocity_;
+//
+//      Leap.Utils.IgnoreCollisions(gameObject, active_object_.gameObject, false);
+//    }
+//    active_object_ = null;
+//
+//    Hover();
+//  }
 
   protected PinchState GetNewPinchState() {
     HandModel hand_model = GetComponent<HandModel>();
@@ -348,8 +350,36 @@ public class GrabbingHand : MonoBehaviour {
 		//coll = Physics.CheckSphere (transform.position, aroundHand);
 		coll = Physics.OverlapSphere (transform.position, aroundHand);
 
+		GameObject temp = GameObject.FindGameObjectWithTag ("RH");
+
+	}
+
+
+	public void sendIndex(){
+		Collider[] coll;
+		//coll = Physics.CheckSphere (transform.position, aroundHand);
+		coll = Physics.OverlapSphere (transform.position, aroundHand);
+		
+		GameObject temp = GameObject.FindGameObjectWithTag ("RH");
+		
 		foreach (Collider c in coll) {
-			isGrabbing = c.gameObject.CompareTag("Weapon");
+			if(c.gameObject.CompareTag("Shield"))
+			{
+				temp.gameObject.SendMessage("setWeapon", 1);
+				
+				Debug.Log (c.gameObject.name + "+++++++1");
+			}
+			if(c.gameObject.CompareTag("ChickenLeg"))
+			{
+				temp.gameObject.SendMessage("setWeapon", 2);
+				Debug.Log (c.gameObject.name + "+++++++2");
+			}
+			if(c.gameObject.CompareTag("Rock"))
+			{
+				temp.gameObject.SendMessage("setWeapon", 3);
+				Debug.Log (c.gameObject.name + "+++++++3");
+			}
+			
 		}
 	}
 
@@ -365,26 +395,26 @@ public class GrabbingHand : MonoBehaviour {
       return;
 
     PinchState new_pinch_state = GetNewPinchState();
-    if (pinch_state_ == PinchState.kPinched) {
-      if (new_pinch_state == PinchState.kReleased)
-        OnRelease();
-      else if (active_object_ != null)
-        ContinueHardPinch();
-    }
-    else if (pinch_state_ == PinchState.kReleasing) {
-      if (new_pinch_state == PinchState.kReleased)
-        OnRelease();
-      else if (new_pinch_state == PinchState.kPinched)
-        StartPinch();
-      else if (active_object_ != null)
-        ContinueSoftPinch();
-    }
-    else {
-      if (new_pinch_state == PinchState.kPinched)
-        StartPinch();
-      else
-        Hover();
-    }
-    pinch_state_ = new_pinch_state;
+//    if (pinch_state_ == PinchState.kPinched) {
+//      if (new_pinch_state == PinchState.kReleased)
+//        OnRelease();
+//      else if (active_object_ != null)
+//        ContinueHardPinch();
+//    }
+//    else if (pinch_state_ == PinchState.kReleasing) {
+//      if (new_pinch_state == PinchState.kReleased)
+//        OnRelease();
+//      else if (new_pinch_state == PinchState.kPinched)
+//        StartPinch();
+//      else if (active_object_ != null)
+//        ContinueSoftPinch();
+//    }
+//    else {
+//      if (new_pinch_state == PinchState.kPinched)
+//        StartPinch();
+//      else
+//        Hover();
+//    }
+//    pinch_state_ = new_pinch_state;
   }
 }

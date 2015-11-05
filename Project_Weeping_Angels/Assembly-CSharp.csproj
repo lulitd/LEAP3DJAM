@@ -240,8 +240,11 @@
      <Compile Include="Assets\Scripts\QuadFadeIn.cs" />
      <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\WalkingGesture.cs" />
+     <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\changeMaterialOnAttack.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
+     <Compile Include="Assets\changeSkybox.cs" />
+     <Compile Include="Assets\teleportPlayer.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />

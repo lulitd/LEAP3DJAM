@@ -14,7 +14,10 @@ public class ButtonDemoToggleStart : ButtonToggleBase
   public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
   public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
 
-
+	public Material MidGraphicsOnMaterial;
+	public Material BotGraphicsOnMaterial;
+	public Material MidGraphicsOffMaterial;
+	public Material BotGraphicsOffMaterial;
 
 	protected override void Start()
 	{
@@ -37,8 +40,10 @@ public class ButtonDemoToggleStart : ButtonToggleBase
   {
     onGraphics.SetActive(true);
     offGraphics.SetActive(false);
-	midGraphics.SetColor(MidGraphicsOnColor);
-	botGraphics.SetColor(BotGraphicsOnColor);
+	//midGraphics.SetColor(MidGraphicsOnColor);
+	midGraphics.SetMaterial (MidGraphicsOnMaterial, MidGraphicsOnColor);
+	//botGraphics.SetColor(BotGraphicsOnColor);
+	botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
 		//Application.LoadLevel ("WalkingTerrainTest");
 		FadeControl.isFade = true;
   }
@@ -47,8 +52,11 @@ public class ButtonDemoToggleStart : ButtonToggleBase
   {
     onGraphics.SetActive(false);
     offGraphics.SetActive(true);
-	midGraphics.SetColor(MidGraphicsOffColor);
-	botGraphics.SetColor(BotGraphicsOffColor);
+	//midGraphics.SetColor(MidGraphicsOffColor);
+	//botGraphics.SetColor(BotGraphicsOffColor);
+		
+		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
+		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
 
   }
 

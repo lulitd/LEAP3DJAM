@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Base path: C:/Program Files/Unity/Editor/Data
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-6356
 Cmd: getPlatforms
@@ -115,3 +116,8 @@ Cmd: compileSnippet
   api=4 type=0 insize=7139 outsize=4272 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF FOG_EXP pd= ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=7139 outsize=2907 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF FOG_EXP pd= ok=1
+=======
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2111406848
+Cmd: getPlatforms
+>>>>>>> Stashed changes

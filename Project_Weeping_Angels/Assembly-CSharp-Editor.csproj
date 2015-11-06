@@ -105,6 +105,12 @@
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Plugins\SystemWipeRecognizerDll.bundle\Contents\MacOS\version.txt" />
      <None Include="Assets\AstarPathfindingProject\link.xml" />
+<<<<<<< Updated upstream
+=======
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
+>>>>>>> Stashed changes
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>

@@ -2,7 +2,7 @@
 using System.Collections;
 using LMWidgets;
 
-public class ButtonDemoToggleOptions : ButtonToggleBase 
+public class ButtonDemoToggleOptBack : ButtonToggleBase 
 {
 	public ButtonDemoGraphics onGraphics;
 	public ButtonDemoGraphics offGraphics;
@@ -18,20 +18,26 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 	public Material BotGraphicsOnMaterial;
 	public Material MidGraphicsOffMaterial;
 	public Material BotGraphicsOffMaterial;
-
-
-  public override void ButtonTurnsOn()
-  {
-    TurnsOnGraphics();
-  }
-
-  public override void ButtonTurnsOff()
-  {
-    TurnsOffGraphics();
-  }
-
-  private void TurnsOnGraphics()
-  {
+	
+	protected override void Start()
+	{
+		base.Start();
+		
+	}
+	
+	
+	public override void ButtonTurnsOn()
+	{
+		TurnsOnGraphics();
+	}
+	
+	public override void ButtonTurnsOff()
+	{
+		TurnsOffGraphics();
+	}
+	
+	private void TurnsOnGraphics()
+	{
 		Debug.Log ("isOptions" + TranslateMenu.isOptions);
 		Debug.Log ("isCredits" + TranslateMenu.isCredits);
 		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
@@ -45,17 +51,12 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
 		//Application.LoadLevel ("WalkingTerrainTest");
 		//FadeControl.isFade = true;
-
-		//GameObject ob = GameObject.FindGameObjectWithTag ("Menu");
-		TranslateMenu.isOptions = true;
-		TranslateMenu.isOptBack = false;
-		TranslateMenu.isCreBack = false;
-
-
-  }
-
-  private void TurnsOffGraphics()
-  {
+		TranslateMenu.isOptBack = true;
+		TranslateMenu.isOptions = false;
+	}
+	
+	private void TurnsOffGraphics()
+	{
 		Debug.Log ("isOptions" + TranslateMenu.isOptions);
 		Debug.Log ("isCredits" + TranslateMenu.isCredits);
 		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
@@ -68,37 +69,30 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		
 		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
-
-		TranslateMenu.isOptions = true;
-		TranslateMenu.isOptBack = false;
-		TranslateMenu.isCreBack = false;
-
-
-
-  }
-
-  private void UpdateGraphics()
-  {
-    Vector3 position = transform.localPosition;
-    position.z = Mathf.Min(position.z, m_localTriggerDistance);
-    onGraphics.transform.localPosition = position;
-    offGraphics.transform.localPosition = position;
-    Vector3 bot_position = position;
-    bot_position.z = Mathf.Max(bot_position.z, m_localTriggerDistance - m_localCushionThickness);
-    botGraphics.transform.localPosition = bot_position;
-    Vector3 mid_position = position;
-    mid_position.z = (position.z + bot_position.z) / 2.0f;
-    midGraphics.transform.localPosition = mid_position;
-  }
-
-  protected override void Start()
-  {
-    base.Start();
-  }
-
-  protected override void FixedUpdate()
-  {
-    base.FixedUpdate();
-    UpdateGraphics();
-  }
+		TranslateMenu.isOptBack = true;
+		TranslateMenu.isOptions = false;
+		
+	}
+	
+	private void UpdateGraphics()
+	{
+		Vector3 position = transform.localPosition;
+		position.z = Mathf.Min(position.z, m_localTriggerDistance);
+		onGraphics.transform.localPosition = position;
+		offGraphics.transform.localPosition = position;
+		Vector3 bot_position = position;
+		bot_position.z = Mathf.Max(bot_position.z, m_localTriggerDistance - m_localCushionThickness);
+		botGraphics.transform.localPosition = bot_position;
+		Vector3 mid_position = position;
+		mid_position.z = (position.z + bot_position.z) / 2.0f;
+		midGraphics.transform.localPosition = mid_position;
+	}
+	
+	
+	
+	protected override void FixedUpdate()
+	{
+		base.FixedUpdate();
+		UpdateGraphics();
+	}
 }

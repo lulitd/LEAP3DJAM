@@ -4,16 +4,20 @@ using LMWidgets;
 
 public class ButtonDemoToggleCredits : ButtonToggleBase 
 {
-  public ButtonDemoGraphics onGraphics;
-  public ButtonDemoGraphics offGraphics;
-  public ButtonDemoGraphics midGraphics;
-  public ButtonDemoGraphics botGraphics;
-  
-  public Color MidGraphicsOnColor = new Color(0.0f, 0.5f, 0.5f, 1.0f);
-  public Color BotGraphicsOnColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
-  public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
-  public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
+	public ButtonDemoGraphics onGraphics;
+	public ButtonDemoGraphics offGraphics;
+	public ButtonDemoGraphics midGraphics;
+	public ButtonDemoGraphics botGraphics;
 	
+	public Color MidGraphicsOnColor = new Color(0.0f, 0.5f, 0.5f, 1.0f);
+	public Color BotGraphicsOnColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
+	public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
+	public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
+	
+	public Material MidGraphicsOnMaterial;
+	public Material BotGraphicsOnMaterial;
+	public Material MidGraphicsOffMaterial;
+	public Material BotGraphicsOffMaterial;
 
   public override void ButtonTurnsOn()
   {
@@ -27,18 +31,36 @@ public class ButtonDemoToggleCredits : ButtonToggleBase
 
   private void TurnsOnGraphics()
   {
+		Debug.Log ("isOptions" + TranslateMenu.isOptions);
+		Debug.Log ("isCredits" + TranslateMenu.isCredits);
+		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
+		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
+
     onGraphics.SetActive(true);
     offGraphics.SetActive(false);
-	midGraphics.SetColor(MidGraphicsOnColor);
-	botGraphics.SetColor(BotGraphicsOnColor);
+		midGraphics.SetMaterial (MidGraphicsOnMaterial, MidGraphicsOnColor);
+		//botGraphics.SetColor(BotGraphicsOnColor);
+		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
+		TranslateMenu.isCredits = true;
+		TranslateMenu.isCreBack = false;
+		TranslateMenu.isOptBack = false;
   }
+
 
   private void TurnsOffGraphics()
   {
+		Debug.Log ("isOptions" + TranslateMenu.isOptions);
+		Debug.Log ("isCredits" + TranslateMenu.isCredits);
+		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
+		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
+
     onGraphics.SetActive(false);
     offGraphics.SetActive(true);
-	midGraphics.SetColor(MidGraphicsOffColor);
-	botGraphics.SetColor(BotGraphicsOffColor);
+		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
+		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
+		TranslateMenu.isCredits = true;
+		TranslateMenu.isCreBack = false;
+		TranslateMenu.isOptBack = false;
   }
 
   private void UpdateGraphics()

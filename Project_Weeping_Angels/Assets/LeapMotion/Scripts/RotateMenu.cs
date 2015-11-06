@@ -14,7 +14,7 @@ public class RotateMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (startRotate) {
-			menu.transform.Rotate (Vector3.up, 10f * Time.deltaTime);
+			menu.transform.Translate(-10.15f, 0f, 0f);
 		}
 		Debug.Log (startRotate);
 	}

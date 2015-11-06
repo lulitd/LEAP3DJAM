@@ -182,7 +182,9 @@
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonBase.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Button\ButtonToggleBase.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoGraphics.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggleCreBack.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggleCredits.cs" />
+     <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggleOptBack.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggleOptions.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\ButtonDemoToggleStart.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\DemoScripts\SliderDemo.cs" />
@@ -241,6 +243,7 @@
      <Compile Include="Assets\Scripts\MovingCharacter.cs" />
      <Compile Include="Assets\Scripts\QuadFadeIn.cs" />
      <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
+     <Compile Include="Assets\Scripts\TranslateMenu.cs" />
      <Compile Include="Assets\Scripts\WalkingGesture.cs" />
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\changeMaterialOnAttack.cs" />
@@ -248,6 +251,7 @@
      <Compile Include="Assets\Scripts\teleportControl.cs" />
      <Compile Include="Assets\Scripts\teleportPlayer.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
+     <Compile Include="Assets\translate.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />

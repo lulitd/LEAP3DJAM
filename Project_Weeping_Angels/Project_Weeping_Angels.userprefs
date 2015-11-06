@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Scripts/Utils/GrabbingHand.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleOptions.cs">
     <Files>
-      <File FileName="Assets/LeapMotion/Scripts/Hands/RigidHand.cs" Line="91" Column="27" />
-      <File FileName="Assets/LeapMotion/Scripts/Utils/GrabbingHand.cs" Line="228" Column="64" />
-      <File FileName="Assets/LeapMotion/Scripts/Utils/GrabbableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleOptions.cs" Line="33" Column="33" />
+      <File FileName="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleStart.cs" Line="49" Column="3" />
+      <File FileName="Assets/LeapMotion/Scripts/RotateMenu.cs" Line="17" Column="40" />
+      <File FileName="Assets/Scripts/FadeControl.cs" Line="10" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

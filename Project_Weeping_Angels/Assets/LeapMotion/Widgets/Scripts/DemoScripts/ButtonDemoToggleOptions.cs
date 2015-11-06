@@ -4,16 +4,21 @@ using LMWidgets;
 
 public class ButtonDemoToggleOptions : ButtonToggleBase 
 {
-  public ButtonDemoGraphics onGraphics;
-  public ButtonDemoGraphics offGraphics;
-  public ButtonDemoGraphics midGraphics;
-  public ButtonDemoGraphics botGraphics;
-  
-  public Color MidGraphicsOnColor = new Color(0.0f, 0.5f, 0.5f, 1.0f);
-  public Color BotGraphicsOnColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
-  public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
-  public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
+	public ButtonDemoGraphics onGraphics;
+	public ButtonDemoGraphics offGraphics;
+	public ButtonDemoGraphics midGraphics;
+	public ButtonDemoGraphics botGraphics;
 	
+	public Color MidGraphicsOnColor = new Color(0.0f, 0.5f, 0.5f, 1.0f);
+	public Color BotGraphicsOnColor = new Color(0.0f, 1.0f, 1.0f, 1.0f);
+	public Color MidGraphicsOffColor = new Color(0.0f, 0.5f, 0.5f, 0.1f);
+	public Color BotGraphicsOffColor = new Color(0.0f, 0.25f, 0.25f, 1.0f);
+	
+	public Material MidGraphicsOnMaterial;
+	public Material BotGraphicsOnMaterial;
+	public Material MidGraphicsOffMaterial;
+	public Material BotGraphicsOffMaterial;
+
 
   public override void ButtonTurnsOn()
   {
@@ -27,20 +32,33 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 
   private void TurnsOnGraphics()
   {
-    onGraphics.SetActive(true);
-    offGraphics.SetActive(false);
-	midGraphics.SetColor(MidGraphicsOnColor);
-	botGraphics.SetColor(BotGraphicsOnColor);
+		onGraphics.SetActive(true);
+		offGraphics.SetActive(false);
+		//midGraphics.SetColor(MidGraphicsOnColor);
+		midGraphics.SetMaterial (MidGraphicsOnMaterial, MidGraphicsOnColor);
+		//botGraphics.SetColor(BotGraphicsOnColor);
+		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
+		//Application.LoadLevel ("WalkingTerrainTest");
+		//FadeControl.isFade = true;
+
+		//GameObject ob = GameObject.FindGameObjectWithTag ("Menu");
+		RotateMenu.startRotate = true;
+
 
   }
 
   private void TurnsOffGraphics()
   {
-    onGraphics.SetActive(false);
-    offGraphics.SetActive(true);
-	midGraphics.SetColor(MidGraphicsOffColor);
-	botGraphics.SetColor(BotGraphicsOffColor);
-		GameObject.FindGameObjectWithTag ("credits");
+		onGraphics.SetActive(false);
+		offGraphics.SetActive(true);
+		//midGraphics.SetColor(MidGraphicsOffColor);
+		//botGraphics.SetColor(BotGraphicsOffColor);
+		
+		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
+		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
+
+
+
 
   }
 

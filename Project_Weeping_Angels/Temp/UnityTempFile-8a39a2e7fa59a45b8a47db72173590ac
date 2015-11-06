@@ -279,5 +279,6 @@
 'Assets/Scripts/changeSkybox.cs'
 'Assets/Scripts/teleportPlayer.cs'
 'Assets/Scripts/tutorialStatus.cs'
+'Assets/teleportControl.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

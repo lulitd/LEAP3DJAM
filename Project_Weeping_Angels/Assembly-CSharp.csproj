@@ -243,6 +243,7 @@
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\changeMaterialOnAttack.cs" />
      <Compile Include="Assets\Scripts\changeSkybox.cs" />
+     <Compile Include="Assets\Scripts\teleportControl.cs" />
      <Compile Include="Assets\Scripts\teleportPlayer.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />

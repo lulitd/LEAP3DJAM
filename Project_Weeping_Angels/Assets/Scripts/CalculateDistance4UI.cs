@@ -43,6 +43,6 @@ public class CalculateDistance4UI : MonoBehaviour {
 		else
 			UISign.SetActive (false);
 
-		Debug.Log ("shortest distance is " + shortestDis.ToString());
+		//Debug.Log ("shortest distance is " + shortestDis.ToString());
 	}
 }

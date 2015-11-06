@@ -43,6 +43,7 @@ public class QuickSwitcher : MonoBehaviour {
 	//public bool IS_ON = false;
 	public bool isSwiped = false;
 	public int Completed_Status = -1;
+	private teleportControl teleportController;
 	//Completed status:
 	//-1: init
 	// 0: On Complete == null
@@ -59,6 +60,7 @@ public class QuickSwitcher : MonoBehaviour {
 		
 		//---------------- Added by Danni -----------------------
 		blinker = GameObject.FindObjectOfType<BlinkQuad> ();
+		teleportController = GameObject.FindObjectOfType<teleportControl> ();
 	}
 	
 	private void onWipeUpdate(object sender, SystemWipeArgs eventArgs) {
@@ -96,6 +98,7 @@ public class QuickSwitcher : MonoBehaviour {
 					blinker.isBlinking = true;
 					//BlinkQuadControl.isBlink = true;
 					Debug.Log("on position");
+					teleportController.Status = 1;
 					//IS_ON = true;
 				}
 				else {
@@ -104,7 +107,7 @@ public class QuickSwitcher : MonoBehaviour {
 					blinker.isBlinking = true;
 					TweenToOffPosition();
 					//BlinkQuadControl.isBlink = true;
-					
+					teleportController.Status = 0;
 					Debug.Log("off position");
 					//IS_ON = false;
 					//}

@@ -82,6 +82,6 @@ public class tutorialStatus : MonoBehaviour {
 		else
 			status++;
 
-		Debug.Log ("Time Limit is " + TimeLimit.ToString());
+		//Debug.Log ("Time Limit is " + TimeLimit.ToString());
 	}
 }

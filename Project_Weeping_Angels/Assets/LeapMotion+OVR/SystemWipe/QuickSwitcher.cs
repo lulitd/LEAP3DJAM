@@ -92,6 +92,13 @@ public class QuickSwitcher : MonoBehaviour {
 				
 				//THIS SECTION HAS BEEN MODIFIED TO FIT THE LEAP 3D JAM
 				isSwiped = true;
+				// luke added
+				GameObject[] slimes = GameObject.FindGameObjectsWithTag ("Slime");
+				foreach (GameObject slime in slimes) {
+					slime.SendMessage("ChangToARRandom");
+					
+				}
+
 				//blinker.isBlinking = true;
 				if ( m_lastLockedState == TransitionState.OFF) {
 					TweenToOnPosition();
@@ -111,7 +118,9 @@ public class QuickSwitcher : MonoBehaviour {
 					Debug.Log("off position");
 					//IS_ON = false;
 					//}
-					
+					foreach (GameObject slime in slimes) {
+						slime.SendMessage("ChangToVR");
+					}
 				}
 			}else
 				isSwiped = false; // else added by Danni

@@ -32,6 +32,11 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 
   private void TurnsOnGraphics()
   {
+		Debug.Log ("isOptions" + TranslateMenu.isOptions);
+		Debug.Log ("isCredits" + TranslateMenu.isCredits);
+		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
+		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
+
 		onGraphics.SetActive(true);
 		offGraphics.SetActive(false);
 		//midGraphics.SetColor(MidGraphicsOnColor);
@@ -42,13 +47,20 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		//FadeControl.isFade = true;
 
 		//GameObject ob = GameObject.FindGameObjectWithTag ("Menu");
-		RotateMenu.startRotate = true;
+		TranslateMenu.isOptions = true;
+		TranslateMenu.isOptBack = false;
+		TranslateMenu.isCreBack = false;
 
 
   }
 
   private void TurnsOffGraphics()
   {
+		Debug.Log ("isOptions" + TranslateMenu.isOptions);
+		Debug.Log ("isCredits" + TranslateMenu.isCredits);
+		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
+		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
+
 		onGraphics.SetActive(false);
 		offGraphics.SetActive(true);
 		//midGraphics.SetColor(MidGraphicsOffColor);
@@ -57,6 +69,9 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
 
+		TranslateMenu.isOptions = true;
+		TranslateMenu.isOptBack = false;
+		TranslateMenu.isCreBack = false;
 
 
 

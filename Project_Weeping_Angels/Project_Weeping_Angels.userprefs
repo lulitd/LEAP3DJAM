@@ -1,17 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/changeSkybox.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/teleportPlayer.cs">
     <Files>
       <File FileName="Assets/Scripts/tutorialStatus.cs" Line="1" Column="1" />
       <File FileName="Assets/changeSkybox.cs" Line="17" Column="20" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Scripts/Utils/GrabbingHand.cs">
-    <Files>
-      <File FileName="Assets/LeapMotion/Scripts/Hands/RigidHand.cs" Line="91" Column="27" />
-      <File FileName="Assets/LeapMotion/Scripts/Utils/GrabbingHand.cs" Line="228" Column="64" />
-      <File FileName="Assets/LeapMotion/Scripts/Utils/GrabbableObject.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets/teleportPlayer.cs" Line="20" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

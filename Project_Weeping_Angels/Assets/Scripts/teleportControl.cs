@@ -4,7 +4,7 @@ using System.Collections;
 public class teleportControl : MonoBehaviour {
 	private bool isInBox = false;
 	public int Status = -1;
-	private int current_Status = -1;
+	public int current_Status = -1;
 	//status
 	//-1 = default
 	//0 = on terrain (VR)

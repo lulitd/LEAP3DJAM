@@ -163,6 +163,7 @@
      <Compile Include="Assets\LeapMotion\Scripts\LeapDeviceInfo.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\LeapImageBasedMaterial.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\LeapImageRetriever.cs" />
+     <Compile Include="Assets\LeapMotion\Scripts\RotateMenu.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\Tools\ToolModel.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\Utils\ConfidenceTransparency.cs" />
      <Compile Include="Assets\LeapMotion\Scripts\Utils\DisconnectionNotice.cs" />
@@ -223,6 +224,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
+     <Compile Include="Assets\Rotate.cs" />
      <Compile Include="Assets\Scene\Luke\ClockTime.cs" />
      <Compile Include="Assets\Scene\Luke\LukeUIHand.cs" />
      <Compile Include="Assets\Scripts\Blink.cs" />
@@ -290,13 +292,13 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.JsonFx">
- <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

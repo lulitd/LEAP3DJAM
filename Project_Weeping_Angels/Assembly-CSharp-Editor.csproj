@@ -106,7 +106,11 @@
      <None Include="Assets\Plugins\SystemWipeRecognizerDll.bundle\Contents\MacOS\version.txt" />
      <None Include="Assets\AstarPathfindingProject\link.xml" />
  <Reference Include="Assembly-UnityScript">
+<<<<<<< HEAD
  <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+=======
+ <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+>>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

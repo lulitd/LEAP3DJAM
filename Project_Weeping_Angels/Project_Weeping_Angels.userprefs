@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleOptions.cs">
     <Files>
@@ -6,6 +7,14 @@
       <File FileName="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleStart.cs" Line="49" Column="3" />
       <File FileName="Assets/LeapMotion/Scripts/RotateMenu.cs" Line="17" Column="40" />
       <File FileName="Assets/Scripts/FadeControl.cs" Line="10" Column="18" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/teleportPlayer.cs">
+    <Files>
+      <File FileName="Assets/Scripts/tutorialStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets/changeSkybox.cs" Line="17" Column="20" />
+      <File FileName="Assets/teleportPlayer.cs" Line="20" Column="66" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -45,6 +45,7 @@ namespace Pathfinding {
 		public float dectPalyerRadius = 5f;
 		public GameObject player;
 		private GameObject waypoint;
+		public bool VR_AR;
 		public new void Start () {
 			
 			//Prioritize the walking animation
@@ -93,6 +94,29 @@ namespace Pathfinding {
 
 			}
 		}
+		//Luke added for change positon at AR and VR
+		public void ChangToARRandom(){
+			
+			//if (VR_AR) {//true then AR 
+			canMove = false;
+			//originPos = transform.position;// call at some whereelse
+			//Debug.Log (originPos.x);
+			
+			transform.position = new Vector3 (Random.Range(66.07115f,78f),127.08f,Random.Range(-1406.4f,-1394f));// position around player;
+			
+			
+		}
+		//Luke added for change to VR
+		public void ChangToVR(){
+			//Debug.Log("1111111111");
+			canMove = true;
+			
+			transform.position = new Vector3(Random.Range(rangeX,rangeX1),8f,Random.Range(rangeZ,rangeZ1));// radanom postion om map
+			
+			
+		}
+
+
 		//Luke added for make the ghost fly around and change thr target to user when in range
 		public void RandomWayPoint(){
 			target.position = new Vector3(Random.Range(rangeX,rangeX1),Random.Range(rangeY,rangeY1),Random.Range(rangeZ,rangeZ1));

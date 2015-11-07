@@ -17,11 +17,6 @@ public class weaponValue : MonoBehaviour {
 		
 	}
 	
-	public void setIndex(int index){
-		
-		weaponIndex = index;
-		Debug.Log ("WeaponIndex " + weaponIndex);
-	}
-	
+
 	
 }

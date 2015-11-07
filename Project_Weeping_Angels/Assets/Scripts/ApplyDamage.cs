@@ -4,7 +4,7 @@ using System.Collections;
 public class ApplyDamage : MonoBehaviour {
 
 	public static bool AR;
-
+	//public GameObject slimePrefeb;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +17,7 @@ public class ApplyDamage : MonoBehaviour {
 		foreach (Collider coll in collider) {
 			if(coll.tag == "Slime"){
 				Destroy(coll.gameObject);
+			//	Instantiate(slimePrefeb,transform.position,Quaternion.identity);
 				Destroy(gameObject);
 				}
 			}

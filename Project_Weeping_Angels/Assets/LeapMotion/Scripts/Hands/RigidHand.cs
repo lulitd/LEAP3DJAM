@@ -35,7 +35,7 @@ public class RigidHand : SkeletalHand {
 	
 	public override void InitHand() {
 		base.InitHand();
-		detectRaduis = 3f;
+		detectRaduis = 1f;
 		rock = GameObject.FindGameObjectWithTag ("Rock");
 		chickenLeg = GameObject.FindGameObjectWithTag ("ChickenLeg");
 		shield = GameObject.FindGameObjectWithTag("Shield");
@@ -46,23 +46,19 @@ public class RigidHand : SkeletalHand {
 		chickenInHand = false;
 		shieldInHand = false;
 		stickInHand = false;
-		
-		
-		manager = GameObject.Find ("");
+
 	}
 	
 	void DetectAroundHands(){
 		Collider [] colls = Physics.OverlapSphere (GetPalmCenter(),detectRaduis);
 		foreach(Collider coll in colls ){
 			if(coll.tag =="Rock"){
-				
 				index_W = 1;
 				weaponValue.weaponIndex = 1;
 				Debug.Log("Rock" + index_W);
 				rockInHand = true;
 				
-			}
-			if(coll.tag =="ChickenLeg"){
+			}else if(coll.tag =="ChickenLeg"){
 				
 				index_W = 2;
 				weaponValue.weaponIndex = 2;
@@ -70,45 +66,43 @@ public class RigidHand : SkeletalHand {
 				chickenInHand = true;
 				
 			}
-			if(coll.tag =="Shield"){
+			else if(coll.tag =="Shield"){
 				
 				index_W = 3;
 				weaponValue.weaponIndex = 3;
-				Debug.Log("Shield" + index_W);
+				//Debug.Log("Shield" + index_W);
 				shieldInHand = true;
 				
+			}else if(coll.tag == "Ground"){
+
 			}
 			
 		}
 	}
 	
 	
-//	void Update(){
-//		DetectAroundHands ();
-//		
-//		if (weaponValue.weaponIndex == 1 && rock != null) {
-//			rock.transform.position = GetPalmCenter();
-//		}
-//		if (weaponValue.weaponIndex == 2 && chickenLeg != null) {
-//			chickenLeg.transform.position = GetPalmCenter();
-//		}
-//		if (weaponValue.weaponIndex == 3 && shieldInHand != null) {
-//			shield.transform.position = GetPalmCenter();
-//		}
-//		Debug.Log ("AR " + AR_);
-//		Debug.Log ("weaponValue weaponIndex" + weaponValue.weaponIndex);
+	void Update(){
+		DetectAroundHands ();
+
+		if (weaponValue.weaponIndex == 1 && rock != null) {
+			rock.transform.position = GetPalmCenter();
+		}
+		if (weaponValue.weaponIndex == 2 && chickenLeg != null) {
+			chickenLeg.transform.position = GetPalmCenter();
+		}
+		if (weaponValue.weaponIndex == 3 && shieldInHand != null) {
+			shield.transform.position = GetPalmCenter();
+		}
+	//	Debug.Log ("AR " + AR_);
+//	//	Debug.Log ("weaponValue weaponIndex" + weaponValue.weaponIndex);
 //		//Debug.Log(GetPalmCenter().x + ", " + GetPalmCenter().y + ", " +  GetPalmCenter().z);
-//	}
+	}
 	
 	//======================Modification End==========================
 
 
 	public override void UpdateHand() {
-		for (int f = 0; f < fingers.Length; ++f) {
-			if (fingers[f] != null)
-				fingers[f].UpdateFinger();
-		}
-		
+
 		if (palm != null) {
 			bool useVelocity = false;
 			Rigidbody palmBody = palm.GetComponent<Rigidbody>();
@@ -188,6 +182,9 @@ public class RigidHand : SkeletalHand {
 				forearm.rotation = GetArmRotation();
 			}
 		}
-		DetectAroundHands ();
+
+
+
+
 	}
 }

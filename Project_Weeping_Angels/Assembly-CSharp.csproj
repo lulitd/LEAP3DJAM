@@ -226,6 +226,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
+     <Compile Include="Assets\RespawnManager.cs" />
      <Compile Include="Assets\Scene\Luke\ClockTime.cs" />
      <Compile Include="Assets\Scene\Luke\LukeUIHand.cs" />
      <Compile Include="Assets\Scripts\ApplyDamage.cs" />

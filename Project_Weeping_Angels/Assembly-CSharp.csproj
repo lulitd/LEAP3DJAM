@@ -258,7 +258,7 @@
      <Compile Include="Assets\Scripts\teleportPlayer.cs" />
      <Compile Include="Assets\Scripts\translate.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
-     <Compile Include="Assets\weaponValue.cs" />
+     <Compile Include="Assets\Scripts\weaponValue.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />

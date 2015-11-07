@@ -83,22 +83,22 @@ public class RigidHand : SkeletalHand {
 	}
 	
 	
-	void Update(){
-		DetectAroundHands ();
-		
-		if (weaponValue.weaponIndex == 1 && rock != null) {
-			rock.transform.position = GetPalmCenter();
-		}
-		if (weaponValue.weaponIndex == 2 && chickenLeg != null) {
-			chickenLeg.transform.position = GetPalmCenter();
-		}
-		if (weaponValue.weaponIndex == 3 && shieldInHand != null) {
-			shield.transform.position = GetPalmCenter();
-		}
-		Debug.Log ("AR " + AR_);
-		Debug.Log ("weaponValue weaponIndex" + weaponValue.weaponIndex);
-		//Debug.Log(GetPalmCenter().x + ", " + GetPalmCenter().y + ", " +  GetPalmCenter().z);
-	}
+//	void Update(){
+//		DetectAroundHands ();
+//		
+//		if (weaponValue.weaponIndex == 1 && rock != null) {
+//			rock.transform.position = GetPalmCenter();
+//		}
+//		if (weaponValue.weaponIndex == 2 && chickenLeg != null) {
+//			chickenLeg.transform.position = GetPalmCenter();
+//		}
+//		if (weaponValue.weaponIndex == 3 && shieldInHand != null) {
+//			shield.transform.position = GetPalmCenter();
+//		}
+//		Debug.Log ("AR " + AR_);
+//		Debug.Log ("weaponValue weaponIndex" + weaponValue.weaponIndex);
+//		//Debug.Log(GetPalmCenter().x + ", " + GetPalmCenter().y + ", " +  GetPalmCenter().z);
+//	}
 	
 	//======================Modification End==========================
 

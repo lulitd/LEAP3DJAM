@@ -37,6 +37,8 @@ public class MovingCharacter : MonoBehaviour {
 		direction.x = -direction.x*2f;
 		direction.y = 0f;
 		direction.z = direction.z;
+		moveDirection = transform.TransformDirection (moveDirection);
+		//moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move (moveDirection * Time.deltaTime * speed);
 		Debug.Log ("player position is " + player.transform.position);
 		Debug.Log ("direction is " + direction.ToString ());

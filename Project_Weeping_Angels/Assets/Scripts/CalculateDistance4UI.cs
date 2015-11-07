@@ -25,7 +25,7 @@ public class CalculateDistance4UI : MonoBehaviour {
 
 		for (int i = 0; i < slimList.Length; i++) {
 			distance[i] = Vector3.Distance(slimList[0].transform.position, Player.transform.position);
-			Debug.Log("distance is " + distance.ToString());
+			//Debug.Log("distance is " + distance.ToString());
 		}
 
 

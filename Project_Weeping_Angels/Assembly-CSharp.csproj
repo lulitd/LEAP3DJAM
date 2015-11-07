@@ -255,6 +255,11 @@
      <Compile Include="Assets\Scripts\teleportPlayer.cs" />
      <Compile Include="Assets\Scripts\translate.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
+<<<<<<< HEAD
+     <Compile Include="Assets\collisionDetectPlayer.cs" />
+     <Compile Include="Assets\translate.cs" />
+=======
+>>>>>>> origin/master
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
@@ -299,6 +304,15 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+<<<<<<< HEAD
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.JsonFx">
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
+ </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+=======
  <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.JsonFx">
@@ -306,6 +320,7 @@
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+>>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

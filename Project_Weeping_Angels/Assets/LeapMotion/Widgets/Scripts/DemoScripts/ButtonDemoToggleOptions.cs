@@ -19,6 +19,7 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 	public Material MidGraphicsOffMaterial;
 	public Material BotGraphicsOffMaterial;
 
+	private FadeTransparency controller;
 
   public override void ButtonTurnsOn()
   {
@@ -47,9 +48,13 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		//FadeControl.isFade = true;
 
 		//GameObject ob = GameObject.FindGameObjectWithTag ("Menu");
-		TranslateMenu.isOptions = true;
-		TranslateMenu.isOptBack = false;
-		TranslateMenu.isCreBack = false;
+//		TranslateMenu.isOptions = true;
+//		TranslateMenu.isOptBack = false;
+//		TranslateMenu.isCreBack = false;
+		FadeControl.isFade = true;
+		controller = GameObject.FindObjectOfType<FadeTransparency> ();
+		controller.EndScene (1);
+		//Application.LoadLevel (1);
 
 
   }

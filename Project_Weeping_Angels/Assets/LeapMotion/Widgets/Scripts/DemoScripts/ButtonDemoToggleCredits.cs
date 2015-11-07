@@ -47,6 +47,8 @@ public class ButtonDemoToggleCredits : ButtonToggleBase
 
 		//to restart the game
 		FadeControl.isFade = true;
+		FadeTransparency controller = GameObject.FindObjectOfType<FadeTransparency> ();
+		//controller.EndScene (0);
 		Application.LoadLevel (0);
   }
 
@@ -62,9 +64,13 @@ public class ButtonDemoToggleCredits : ButtonToggleBase
     offGraphics.SetActive(true);
 		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
-		TranslateMenu.isCredits = true;
-		TranslateMenu.isCreBack = false;
-		TranslateMenu.isOptBack = false;
+//		TranslateMenu.isCredits = true;
+//		TranslateMenu.isCreBack = false;
+//		TranslateMenu.isOptBack = false;
+
+		//to restart the game
+//		FadeControl.isFade = true;
+//		Application.LoadLevel (0);
   }
 
   private void UpdateGraphics()

@@ -8,15 +8,16 @@ public class MovingCharacter : MonoBehaviour {
 	private Vector3 direction;
 	private bool isMoving = false;
 	public float speed;
-
+	private teleportControl StatusController;
 	void Start () {
+		StatusController = GameObject.FindObjectOfType<teleportControl> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 	
 
 	void Update () {
 		isMoving = WalkingGesture.isMoving;
-		if (isMoving) {
+		if (isMoving && StatusController.current_Status == 0) {
 			direction = WalkingGesture.moving_Direction;
 			_moveCharacter();
 		}
@@ -35,6 +36,9 @@ public class MovingCharacter : MonoBehaviour {
 		direction.y = 0f;
 		direction.z = direction.z;
 		controller.Move (direction * Time.deltaTime * speed);
+		Debug.Log ("player position is " + player.transform.position);
+		Debug.Log ("direction is " + direction.ToString ());
+
 
 	}
 }

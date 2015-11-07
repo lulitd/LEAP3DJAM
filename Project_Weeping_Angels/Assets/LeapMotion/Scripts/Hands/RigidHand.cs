@@ -12,9 +12,32 @@ using Leap;
 public class RigidHand : SkeletalHand {
 	
 	public float filtering = 0.5f;
-	
+	public float detectRaduis;
+	private GameObject rock;
+	private GameObject chickenLeg;
+
 	public override void InitHand() {
 		base.InitHand();
+		detectRaduis = 5f;
+		rock = GameObject.FindGameObjectWithTag ("Rock");
+		chickenLeg = GameObject.FindGameObjectWithTag ("ChickenLeg");
+
+	}
+
+	void DetectAroundHands(){
+		Collider [] colls = Physics.OverlapSphere (GetPalmCenter(),detectRaduis);
+		foreach(Collider coll in colls ){
+			if(coll.tag =="Rock"){
+
+				rock.transform.position = GetPalmCenter();
+
+			}
+			if(coll.tag =="ChickenLeg"){
+				Debug.Log("Chicken");
+				chickenLeg.transform.position = GetPalmCenter();
+				
+			}
+		}
 	}
 	
 	public override void UpdateHand() {
@@ -102,5 +125,6 @@ public class RigidHand : SkeletalHand {
 				forearm.rotation = GetArmRotation();
 			}
 		}
+		DetectAroundHands ();
 	}
 }

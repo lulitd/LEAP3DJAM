@@ -101,7 +101,9 @@ namespace Pathfinding {
 			canMove = false;
 			//originPos = transform.position;// call at some whereelse
 			//Debug.Log (originPos.x);
-			
+			//Destroy (gameObject.GetComponent<Rigidbody> ());
+			gameObject.GetComponent<Rigidbody> ().isKinematic = true;
+			gameObject.GetComponent<Rigidbody> ().Sleep ();
 			transform.position = new Vector3 (Random.Range(66.07115f,78f),127.08f,Random.Range(-1406.4f,-1394f));// position around player;
 			
 			
@@ -110,7 +112,9 @@ namespace Pathfinding {
 		public void ChangToVR(){
 			//Debug.Log("1111111111");
 			canMove = true;
-			
+			//Rigidbody newrigidBody = gameObject.AddComponent<Rigidbody> ();
+			gameObject.GetComponent<Rigidbody> ().isKinematic = false;
+			gameObject.GetComponent<Rigidbody> ().WakeUp ();
 			transform.position = new Vector3(Random.Range(rangeX,rangeX1),8f,Random.Range(rangeZ,rangeZ1));// radanom postion om map
 			
 			

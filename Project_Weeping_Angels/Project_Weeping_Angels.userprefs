@@ -4,9 +4,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleCredits.cs">
 =======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/teleportControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="Assets/collisionDetectPlayer.cs" Line="21" Column="3" />
       <File FileName="Assets/Scripts/CalculateDistance4UI.cs" Line="28" Column="6" />
       <File FileName="Assets/Scripts/teleportControl.cs" Line="1" Column="1" />
@@ -32,6 +32,12 @@
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master
+=======
+      <File FileName="Assets/Scripts/teleportControl.cs" Line="7" Column="8" />
+      <File FileName="Assets/collisionDetectPlayer.cs" Line="26" Column="29" />
+      <File FileName="Assets/Scripts/CalculateDistance4UI.cs" Line="1" Column="1" />
+      <File FileName="Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs" Line="97" Column="9" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

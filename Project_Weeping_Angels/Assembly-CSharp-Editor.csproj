@@ -106,8 +106,8 @@
      <None Include="Assets\Plugins\SystemWipeRecognizerDll.bundle\Contents\MacOS\version.txt" />
      <None Include="Assets\AstarPathfindingProject\link.xml" />
  <Reference Include="Assembly-UnityScript">
-<<<<<<< HEAD
  <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+<<<<<<< Updated upstream
 =======
  <HintPath>/Users/yuyu/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
 >>>>>>> origin/master
@@ -117,6 +117,8 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> Stashed changes
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -132,6 +134,7 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+<<<<<<< Updated upstream
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -144,6 +147,10 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/master
+=======
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+>>>>>>> Stashed changes
  <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.JsonFx">
@@ -151,6 +158,7 @@
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>/Users/Hisashi/Documents/3DJam/Github_sharable/new/LEAP3DJAM/Project_Weeping_Angels/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+<<<<<<< Updated upstream
 =======
  <HintPath>C:/Users/luke-pc/Documents/GitHub/LEAP3DJAM/Project_Weeping_Angels/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
 >>>>>>> origin/master
@@ -168,6 +176,8 @@
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> Stashed changes
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>

@@ -99,6 +99,11 @@ public class QuickSwitcher : MonoBehaviour {
 					
 				}
 
+				//==================Yuyu and Luke added it=====================
+				//Set the AR to be true in other two classes
+				//RigidHand.AR_ = true;
+				ApplyDamage.AR = true;
+				//=========================End===============================
 				//blinker.isBlinking = true;
 				if ( m_lastLockedState == TransitionState.OFF) {
 					TweenToOnPosition();
@@ -118,9 +123,16 @@ public class QuickSwitcher : MonoBehaviour {
 					Debug.Log("off position");
 					//IS_ON = false;
 					//}
+
+					//======================LUKE added==========================
+					ApplyDamage.AR = false;
+					
 					foreach (GameObject slime in slimes) {
 						slime.SendMessage("ChangToVR");
+						
 					}
+					
+					//=========================End===============================
 				}
 			}else
 				isSwiped = false; // else added by Danni

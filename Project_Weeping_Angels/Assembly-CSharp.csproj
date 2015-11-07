@@ -246,6 +246,7 @@
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\TranslateMenu.cs" />
+     <Compile Include="Assets\Scripts\TurnOnHand.cs" />
      <Compile Include="Assets\Scripts\WalkingGesture.cs" />
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\changeMaterialOnAttack.cs" />
@@ -257,6 +258,7 @@
      <Compile Include="Assets\Scripts\teleportPlayer.cs" />
      <Compile Include="Assets\Scripts\translate.cs" />
      <Compile Include="Assets\Scripts\tutorialStatus.cs" />
+     <Compile Include="Assets\weaponValue.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />

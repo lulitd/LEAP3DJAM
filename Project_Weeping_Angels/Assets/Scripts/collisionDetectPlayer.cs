@@ -6,7 +6,8 @@ public class collisionDetectPlayer : MonoBehaviour {
 	private GameObject player;
 	private GameObject[] Monsters;
 	private teleportControl controller;
-
+	public static bool isPlayerDead = false;
+	public static bool PlayAudio = false;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -24,6 +25,8 @@ public class collisionDetectPlayer : MonoBehaviour {
 		//Debug.Log ("collision");
 		if (col.gameObject.tag == "Slime" && controller.current_Status == 0) {
 			Debug.Log("Player Dies");
+			isPlayerDead = true;
+			PlayAudio = true;
 		}
 	}
 

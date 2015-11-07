@@ -53,6 +53,20 @@ public class QuadFadeIn : MonoBehaviour {
 			sceneStarting = false;
 		}
 	}
+
+	public void EndScene(int SceneNumber)
+	{
+		// Make sure the RawImage is enabled.
+		fader.SetActive(true);
+		
+		// Start fading towards black.
+		FadeToBlack();
+		
+		// If the screen is almost black...
+		if (renderer.material.color.a >= 0.95f)
+			// ... reload the level
+			Application.LoadLevel(SceneNumber);
+	}
 	
 	
 

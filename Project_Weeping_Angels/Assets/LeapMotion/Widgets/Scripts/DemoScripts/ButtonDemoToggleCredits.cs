@@ -70,7 +70,8 @@ public class ButtonDemoToggleCredits : ButtonToggleBase
 
 		//to restart the game
 //		FadeControl.isFade = true;
-//		Application.LoadLevel (0);
+		//Application.LoadLevel (0);
+		collisionDetectPlayer.isPlayerDead = false;
   }
 
   private void UpdateGraphics()

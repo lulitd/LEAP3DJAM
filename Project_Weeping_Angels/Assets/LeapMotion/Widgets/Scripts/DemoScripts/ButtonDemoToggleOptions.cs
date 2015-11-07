@@ -54,6 +54,7 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		FadeControl.isFade = true;
 		controller = GameObject.FindObjectOfType<FadeTransparency> ();
 		controller.EndScene (1);
+		collisionDetectPlayer.isPlayerDead = false;
 		//Application.LoadLevel (1);
 
 

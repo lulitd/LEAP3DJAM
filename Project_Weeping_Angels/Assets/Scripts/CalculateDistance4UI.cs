@@ -38,10 +38,13 @@ public class CalculateDistance4UI : MonoBehaviour {
 				shortestDis = distance[i];
 		}
 
-		if (shortestDis != -1f && shortestDis < distance_threshold)
+		if (shortestDis != -1f && shortestDis < distance_threshold) {
+			materialSwitch.swap = true;
 			UISign.SetActive (true);
-		else
+		} else {
+
 			UISign.SetActive (false);
+		}
 
 		//Debug.Log ("shortest distance is " + shortestDis.ToString());
 	}

@@ -22,12 +22,15 @@ public class teleportControl : MonoBehaviour {
 			//if currently in VR and quick switch gesture has been detected,
 			//then teleport to the box
 			teleportPlayer.ToAR = true;
+			materialSwitch.noTexture = true;
 			current_Status = 1;
 			Debug.Log("ToAR is " + teleportPlayer.ToAR.ToString());
 		} else if (current_Status == 1 && Status == 0) {
 			//if currently in AR and quick switch gesture has been detected,
 			//then teleport to the terrain
 			teleportPlayer.ToVR = true;
+			materialSwitch.noTexture = false;
+			materialSwitch.swap=false;
 			current_Status = 0;
 		}
 

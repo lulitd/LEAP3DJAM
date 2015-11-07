@@ -31,19 +31,23 @@ public class ButtonDemoToggleCredits : ButtonToggleBase
 
   private void TurnsOnGraphics()
   {
-		Debug.Log ("isOptions" + TranslateMenu.isOptions);
-		Debug.Log ("isCredits" + TranslateMenu.isCredits);
-		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
-		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
+//		Debug.Log ("isOptions" + TranslateMenu.isOptions);
+//		Debug.Log ("isCredits" + TranslateMenu.isCredits);
+//		Debug.Log ("isOptBack" + TranslateMenu.isOptBack);
+//		Debug.Log ("isCreBack" + TranslateMenu.isCreBack);
 
-    onGraphics.SetActive(true);
-    offGraphics.SetActive(false);
+   		 onGraphics.SetActive(true);
+   		 offGraphics.SetActive(false);
 		midGraphics.SetMaterial (MidGraphicsOnMaterial, MidGraphicsOnColor);
 		//botGraphics.SetColor(BotGraphicsOnColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
-		TranslateMenu.isCredits = true;
-		TranslateMenu.isCreBack = false;
-		TranslateMenu.isOptBack = false;
+//		TranslateMenu.isCredits = true;
+//		TranslateMenu.isCreBack = false;
+//		TranslateMenu.isOptBack = false;
+
+		//to restart the game
+		FadeControl.isFade = true;
+		Application.LoadLevel (0);
   }
 
 

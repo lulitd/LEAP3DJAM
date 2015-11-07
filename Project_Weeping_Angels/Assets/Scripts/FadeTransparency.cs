@@ -66,6 +66,6 @@ public class FadeTransparency : MonoBehaviour {
 		// If the screen is almost black...
 		if (renderer.material.color.a >= 0.95f)
 			// ... reload the level
-			Application.LoadLevel("WalkingTerrainTest");
+			Application.LoadLevel(SceneNumber);
 	}
 }

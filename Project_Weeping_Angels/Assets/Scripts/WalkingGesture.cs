@@ -120,7 +120,7 @@ public class WalkingGesture : MonoBehaviour {
 					float angle = Vector3.Angle(Pre_Direction, Temp_Direction);
 
 					if(angle> Angle_Threshold){
-						Debug.Log("angle bigger than threshold! Angle is " + angle.ToString());
+						//Debug.Log("angle bigger than threshold! Angle is " + angle.ToString());
 						moving_Direction = Temp_Direction;
 						isMoving = true;
 					}else if (angle < Angle_Threshold){

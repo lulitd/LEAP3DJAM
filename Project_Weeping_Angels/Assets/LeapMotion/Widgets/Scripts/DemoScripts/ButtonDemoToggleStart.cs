@@ -46,6 +46,7 @@ public class ButtonDemoToggleStart : ButtonToggleBase
 	botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
 		//Application.LoadLevel ("WalkingTerrainTest");
 		FadeControl.isFade = true;
+		ButtonAudioCtrl.playAudio = true;
   }
 
   private void TurnsOffGraphics()

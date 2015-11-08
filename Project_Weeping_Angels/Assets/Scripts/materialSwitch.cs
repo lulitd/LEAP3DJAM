@@ -34,10 +34,10 @@ public class materialSwitch : MonoBehaviour
 		if (swap) {
 
 			foreach (Renderer r in rend) {
-				Debug.Log (r + ":" + r.material.mainTexture);
+				//Debug.Log (r + ":" + r.material.mainTexture);
 				if (r.material.GetTexture ("_MainTex") == null) {
 					r.material.SetColor ("_Color",secondaryColor);
-					Debug.Log ("no texture !");	
+					//Debug.Log ("no texture !");	
 				} else {
 					//prevTexture= r.material.mainTexture;
 					r.material.mainTexture = newMainTexture;
@@ -45,17 +45,17 @@ public class materialSwitch : MonoBehaviour
 					r.material.SetColor ("_Color", mainColor);
 				}
 			}
-			Debug.Log("Swap complete!");
+			//Debug.Log("Swap complete!");
 			swap = false;
 		} 
 
 		if (!swap  && !noTexture) {
 
 			foreach (Renderer r in rend) {
-				Debug.Log (r + ":" + r.material.mainTexture);
+				//Debug.Log (r + ":" + r.material.mainTexture);
 				if (r.material.GetTexture ("_MainTex") == null) {
 					r.material.SetColor ("_Color",Color.yellow);
-					Debug.Log ("no texture !");	
+					//Debug.Log ("no texture !");	
 				} else {
 					//prevTexture= r.material.mainTexture;
 					r.material.mainTexture = originalTexture;
@@ -63,7 +63,7 @@ public class materialSwitch : MonoBehaviour
 					r.material.SetColor ("_Color",Color.white);
 				}
 			}
-			Debug.Log("Swap complete!");
+			//Debug.Log("Swap complete!");
 			swap = false;
 		}
 	
@@ -73,13 +73,13 @@ public class materialSwitch : MonoBehaviour
 				Debug.Log (r + ":" + r.material.mainTexture);
 				if (r.material.GetTexture ("_MainTex") == null) {
 					r.material.SetColor ("_Color",Color.white);
-					Debug.Log ("no texture: texture ==null");	
+					//Debug.Log ("no texture: texture ==null");	
 				} else {
 					//prevTexture= r.material.mainTexture;
 					r.material.mainTexture = emptyTexture;
 					// set to white so there is no colour distortion
 					r.material.SetColor ("_Color", Color.white);
-					Debug.Log ("no texture: texture ==newtexture");	
+					//Debug.Log ("no texture: texture ==newtexture");	
 				}
 
 				}

@@ -45,17 +45,9 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		//botGraphics.SetColor(BotGraphicsOnColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
 		//Application.LoadLevel ("WalkingTerrainTest");
-		//FadeControl.isFade = true;
-
-		//GameObject ob = GameObject.FindGameObjectWithTag ("Menu");
-//		TranslateMenu.isOptions = true;
-//		TranslateMenu.isOptBack = false;
-//		TranslateMenu.isCreBack = false;
-		FadeControl.isFade = true;
-		controller = GameObject.FindObjectOfType<FadeTransparency> ();
-		controller.EndScene (1);
-		collisionDetectPlayer.isPlayerDead = false;
-		//Application.LoadLevel (1);
+		TranslateMenu.isOptions = true;
+		TranslateMenu.isOptBack = false;
+		TranslateMenu.isCreBack = false;
 
 
   }

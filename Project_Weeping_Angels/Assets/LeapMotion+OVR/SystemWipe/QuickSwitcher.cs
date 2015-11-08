@@ -103,6 +103,7 @@ public class QuickSwitcher : MonoBehaviour {
 				//Set the AR to be true in other two classes
 				//RigidHand.AR_ = true;
 				ApplyDamage.AR = true;
+
 				//=========================End===============================
 				//blinker.isBlinking = true;
 				if ( m_lastLockedState == TransitionState.OFF) {

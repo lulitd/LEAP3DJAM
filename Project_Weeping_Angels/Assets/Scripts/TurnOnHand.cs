@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TurnOnHand : MonoBehaviour {
 
-	public GameObject hand;
+	GameObject hand;
 	// Use this for initialization
 	void Start () {
 		hand = GameObject.FindGameObjectWithTag("Hand");

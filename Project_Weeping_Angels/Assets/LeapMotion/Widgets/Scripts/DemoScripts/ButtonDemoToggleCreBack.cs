@@ -45,12 +45,11 @@ public class ButtonDemoToggleCreBack : ButtonToggleBase
 
 		onGraphics.SetActive(true);
 		offGraphics.SetActive(false);
-		//midGraphics.SetColor(MidGraphicsOnColor);
+
 		midGraphics.SetMaterial (MidGraphicsOnMaterial, MidGraphicsOnColor);
-		//botGraphics.SetColor(BotGraphicsOnColor);
+	
 		botGraphics.SetMaterial(BotGraphicsOffMaterial, BotGraphicsOnColor);
-		//Application.LoadLevel ("WalkingTerrainTest");
-		//FadeControl.isFade = true;
+
 		TranslateMenu.isCreBack = true;
 		TranslateMenu.isCredits = false;
 	}
@@ -64,9 +63,7 @@ public class ButtonDemoToggleCreBack : ButtonToggleBase
 
 		onGraphics.SetActive(false);
 		offGraphics.SetActive(true);
-		//midGraphics.SetColor(MidGraphicsOffColor);
-		//botGraphics.SetColor(BotGraphicsOffColor);
-		
+
 		midGraphics.SetMaterial(MidGraphicsOffMaterial,MidGraphicsOffColor);
 		botGraphics.SetMaterial(BotGraphicsOffMaterial,BotGraphicsOffColor);
 

@@ -17,7 +17,7 @@ public class MovingCharacter : MonoBehaviour {
 
 	void Update () {
 		isMoving = WalkingGesture.isMoving;
-		if (isMoving && StatusController.current_Status == 0) {
+		if (isMoving && StatusController.current_Status == 0 && !collisionDetectPlayer.isPlayerDead) {
 			direction = WalkingGesture.moving_Direction;
 			_moveCharacter();
 		}

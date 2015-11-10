@@ -1,17 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LeapMotion/Scripts/Hands/RigidHand.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs">
     <Files>
-      <File FileName="Assets/Scripts/collisionDetectPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ApplyDamage.cs" Line="19" Column="67" />
+      <File FileName="Assets/Scripts/BlinkQuadControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/OVR/Scripts/Util/OVRPlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/LeapMotion+OVR/SystemWipe/QuickSwitcher.cs" Line="1" Column="1" />
-      <File FileName="Assets/LeapMotion/Scripts/Hands/RigidHand.cs" Line="102" Column="3" />
-      <File FileName="Assets/Scripts/TurnOnHand.cs" Line="1" Column="1" />
+      <File FileName="Assets/OVR/Scripts/OVRManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BlinkQuickSwitcher.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/collisionDetectPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/MovingCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/teleportControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/WalkingGesture.cs" Line="1" Column="1" />
-      <File FileName="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoToggleStart.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ButtonAudioCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/LeapMotion/Widgets/Scripts/DemoScripts/ButtonDemoRestart.cs" Line="1" Column="1" />
+      <File FileName="Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs" Line="107" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

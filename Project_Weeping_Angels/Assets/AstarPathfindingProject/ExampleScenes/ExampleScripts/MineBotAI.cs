@@ -104,7 +104,7 @@ namespace Pathfinding {
 			//Destroy (gameObject.GetComponent<Rigidbody> ());
 			gameObject.GetComponent<Rigidbody> ().isKinematic = true;
 			gameObject.GetComponent<Rigidbody> ().Sleep ();
-			transform.position = new Vector3 (Random.Range(66.07115f,78f),127.08f,Random.Range(-1406.4f,-1394f));// position around player;
+			transform.position = new Vector3 (Random.Range(64.07115f,71f),127.08f,Random.Range(-1409.4f,-1401f));// position around player;
 			
 			
 		}

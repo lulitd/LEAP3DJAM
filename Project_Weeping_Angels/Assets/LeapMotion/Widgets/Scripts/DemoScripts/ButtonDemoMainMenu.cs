@@ -57,7 +57,8 @@ public class ButtonDemoMainMenu : ButtonToggleBase
 		collisionDetectPlayer.isPlayerDead = false;
 		//Application.LoadLevel (1);
 		
-		
+		ButtonAudioCtrl.isPressed = true;
+		ButtonAudioCtrl.playFirstTime = true;
 	}
 	
 	private void TurnsOffGraphics()

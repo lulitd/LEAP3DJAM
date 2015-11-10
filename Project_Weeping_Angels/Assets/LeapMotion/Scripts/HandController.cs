@@ -122,9 +122,6 @@ public class HandController : MonoBehaviour {
     hand_graphics_ = new Dictionary<int, HandModel>();
     hand_physics_ = new Dictionary<int, HandModel>();
 
-		
-
-
     tools_ = new Dictionary<int, ToolModel>();
 
     if (leap_controller_ == null) {
@@ -185,15 +182,14 @@ public class HandController : MonoBehaviour {
                                   HandModel left_model, HandModel right_model) {
     List<int> ids_to_check = new List<int>(all_hands.Keys);
 
-	
     // Go through all the active hands and update them.
     int num_hands = leap_hands.Count;
     for (int h = 0; h < num_hands; ++h) {
       Hand leap_hand = leap_hands[h];
       
       HandModel model = (mirrorZAxis != leap_hand.IsLeft) ? left_model : right_model;
-	  
-			// If we've mirrored since this hand was updated, destroy it.
+
+      // If we've mirrored since this hand was updated, destroy it.
       if (all_hands.ContainsKey(leap_hand.Id) &&
           all_hands[leap_hand.Id].IsMirrored() != mirrorZAxis) {
         DestroyHand(all_hands[leap_hand.Id]);
@@ -335,8 +331,6 @@ public class HandController : MonoBehaviour {
       UpdateHandModels(hand_graphics_, frame.Hands, leftGraphicsModel, rightGraphicsModel);
       prev_graphics_id_ = frame.Id;
     }
-	
-
   }
 
   /** Updates the physics objects */
@@ -351,9 +345,7 @@ public class HandController : MonoBehaviour {
       UpdateHandModels(hand_physics_, frame.Hands, leftPhysicsModel, rightPhysicsModel);
       UpdateToolModels(tools_, frame.Tools, toolModel);
       prev_physics_id_ = frame.Id;
-	}
-
-
+    }
   }
 
   /** True, if the Leap Motion hardware is plugged in and this application is connected to the Leap Motion service. */

@@ -18,6 +18,15 @@ public class collisionDetectPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Monsters = GameObject.FindGameObjectsWithTag ("Slime");
+		Collider[]colls = Physics.OverlapSphere (transform.position,1f);
+		foreach (Collider coll in colls) {
+			if(coll.tag == "Slime"&&controller.current_Status == 0){
+				Debug.Log("Player Dies");
+				isPlayerDead = true;
+				PlayAudio = true;
+			}
+		}
+
 
 	}
 

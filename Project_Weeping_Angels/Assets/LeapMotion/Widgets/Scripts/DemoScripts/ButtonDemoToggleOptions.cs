@@ -49,7 +49,8 @@ public class ButtonDemoToggleOptions : ButtonToggleBase
 		TranslateMenu.isOptBack = false;
 		TranslateMenu.isCreBack = false;
 
-
+		ButtonAudioCtrl.isPressed = true;
+		ButtonAudioCtrl.playFirstTime = true;
   }
 
   private void TurnsOffGraphics()

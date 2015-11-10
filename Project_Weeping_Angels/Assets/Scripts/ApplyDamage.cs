@@ -19,7 +19,8 @@ public class ApplyDamage : MonoBehaviour {
 		Collider[]collider = Physics.OverlapSphere (transform.position,1f);
 		foreach (Collider coll in collider) {
 			if(coll.tag == "Slime"){
-				Debug.Log ("Collide the Slime ");
+				//Debug.Log ("Collide the Slime ");
+
 				Destroy(coll.gameObject);
 				Destroy(gameObject);
 				}

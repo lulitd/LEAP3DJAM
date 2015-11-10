@@ -52,6 +52,9 @@ public class ButtonDemoToggleCreBack : ButtonToggleBase
 
 		TranslateMenu.isCreBack = true;
 		TranslateMenu.isCredits = false;
+
+		ButtonAudioCtrl.isPressed = true;
+		ButtonAudioCtrl.playFirstTime = true;
 	}
 	
 	private void TurnsOffGraphics()

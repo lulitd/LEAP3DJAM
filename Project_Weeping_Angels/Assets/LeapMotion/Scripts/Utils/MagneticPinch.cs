@@ -20,7 +20,7 @@ public class MagneticPinch : MonoBehaviour {
   /** The stiffness of the spring force used to move the object toward the hand. */
   public float forceSpringConstant = 100.0f;
   /** The maximum range at which an object can be picked up.*/
-  public float magnetDistance = 0.05f;
+  public float magnetDistance = 2.0f;
 
   protected bool pinching_;
   protected Collider grabbed_;

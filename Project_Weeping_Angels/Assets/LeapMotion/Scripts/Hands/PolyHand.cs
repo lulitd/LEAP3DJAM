@@ -30,12 +30,6 @@ public class PolyHand : HandModel {
 
   /** Updates the hand and calls the finger update functions. */
   public override void UpdateHand() {
-			
-		print("Rigid Hand === Update PolyHand");
-//		Collision cl = GetComponent<Collision> ();
-//		Debug.Log (cl.collider.gameObject.name);
-
-
     SetPalmOrientation();
 
     for (int f = 0; f < fingers.Length; ++f) {

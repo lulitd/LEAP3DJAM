@@ -4,11 +4,11 @@ using System.Collections;
 public class ButtonAudioCtrl : MonoBehaviour {
 
 	public AudioClip audio;
-	public float vol = .5f;
-	public static bool playAudio = false;
+	public float vol = 1.0f;
+	public static bool isPressed = false;
+	public static bool playFirstTime = true;
 
 	private AudioSource source;
-	public static bool playFirstTime = true;
 
 	// Use this for initialization
 	void Awake () {
@@ -16,9 +16,9 @@ public class ButtonAudioCtrl : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (playAudio && playFirstTime) {
+		if (isPressed && playFirstTime) {
 			source.PlayOneShot (audio, vol);
-			playFirstTime = false;
+			playFirstTime = false;	// to prevent it from playing multiple times
 		}
 	}
 }
